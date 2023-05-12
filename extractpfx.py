@@ -48,7 +48,8 @@ def extractPfx(friendlyName, pfxPath, outputDirectory, pfxPassword, privateKeyPa
             "metadata:\n"
             "  name: tls-" + friendlyName + "\n"
             "  namespace: default\n"
-            "type: kubernetes.io/tls")
+            "type: kubernetes.io/tls\n"
+            "kind: Secret")
 
         print(f"Cert: \n{cert_str}")
         print(f"Decrypted PK: \n{dpk_str}")
